@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sweeties</title>
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/4b0cd13045.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Source CDN  -->
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="../public/css/swiper.css" />
+    <script src="../public/js/data.js"></script>
+    <script src="../public/js/swiper.js" defer></script>
+    <style>
+      #center {
+        display: flex;
+        background-color: #fffdf1;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      .registrationContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      #month,
+      #day {
+        padding: 0.5em 0.25em 0.5em 0.25em;
+        border-radius: 2.5px;
+      }
+      #textCenter {
+        font-weight: bold;
+        text-align: center;
+        color: #6d4f4f;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .registration__container {
+        border-radius: 20px;
+        padding: 20px;
+        padding-left: 30px;
+        margin: 15px;
+        background-color: rgb(218, 188, 176);
+      }
+
+      #form_register {
+        /* padding-left: 30%;
+        padding-right: 30%; */
+        justify-content: center;
+        width: 60%;
+      }
+      .registration {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="">
+      <div
+        class="container py-4 d-flex flex-row align-items-center gap-4 justify-content-between"
+      >
+        <div class="navbar-brand">
+          <img
+            src="https://skins.minimog.co/cdn/shop/files/cake_logo.png"
+            alt=""
+            srcset=""
+            width="200px"
+          />
+        </div>
+        <div>
+          <ul
+            id="header-nav-items"
+            class="navbar-nav d-flex flex-row gap-3 align-items-center"
+          ></ul>
+          <div class="header-menu-bars">
+            <i
+              id="header-menu-bars-btn"
+              class="btn-default fa-solid fa-bars"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              onclick="printMenuBar()"
+            ></i>
+            <div
+              class="offcanvas offcanvas-end border-0"
+              tabindex="-1"
+              id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                  <div class="navbar-brand">
+                    <img
+                      src="https://skins.minimog.co/cdn/shop/files/cake_logo.png"
+                      alt=""
+                      srcset=""
+                      width="150px"
+                    />
+                  </div>
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul
+                  id="offcanvas-body-header"
+                  class="list-group list-group-flush"
+                ></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div>
+      <!-- Swiper -->
+      <div class="swiper sliderBanner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://skins.minimog.co/cdn/shop/files/cake_slide_1.jpg"
+            />
+            <div class="swiper-slide-transform">
+              <div>
+                <h4 class="heading-title">Little bliss in<br />Every bite</h4>
+                <p>
+                  Special fluffiness for your loved one! A thoughtful expression
+                  through good food and warm experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://skins.minimog.co/cdn/shop/files/cake_slide_2.jpg"
+            />
+            <div class="swiper-slide-transform">
+              <div>
+                <h4 class="heading-title">Little bliss in<br />Every bite</h4>
+                <p>
+                  Special fluffiness for your loved one! A thoughtful expression
+                  through good food and warm experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://skins.minimog.co/cdn/shop/files/cake_slide_3.jpg"
+            />
+            <div class="swiper-slide-transform">
+              <div>
+                <h4 class="heading-title">Little bliss in<br />Every bite</h4>
+                <p>
+                  Special fluffiness for your loved one! A thoughtful expression
+                  through good food and warm experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <main id="main" class="container">
+      <section id="center" class="py-5">
+        <div>
+          <div class="titleDiv">
+            <h2 id="textCenter">MEMBER REGISTRATION</h2>
+          </div>
+          <div class="productContainer">
+            <div class="product" style="flex: 0.75; padding: 20px">
+              <div
+                class="form__register--container d-flex justify-content-center align-items-center"
+              >
+                <form id="form_register" name="dangky" method="post" action="#">
+                  <div class="registrationContainer">
+                    <!--Personal Info Fieldset-->
+                    <div class="paddingItem">
+                      <fieldset>
+                        <legend><b>Personal Information</b></legend>
+                        <div class="registration__container">
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Full name:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input style="width: 275px" type="text" />
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <label for="day">Birthday:</label>
+                            </div>
+                            <div class="registerLeftItem">
+                              <select id="day" name="day"></select>
+                              <script>
+                                var daySelect = document.getElementById("day");
+                                for (var i = 1; i <= 31; i++) {
+                                  var option = document.createElement("option");
+                                  var dayNumber =
+                                    i < 10 ? "0" + i : i.toString();
+                                  option.value = dayNumber;
+                                  option.textContent = dayNumber;
+                                  daySelect.appendChild(option);
+                                }
+                              </script>
+                              <label for="month">Month:</label>
+                              <select id="month" name="month"></select>
+                              <script>
+                                var monthSelect =
+                                  document.getElementById("month");
+                                for (var i = 1; i <= 12; i++) {
+                                  var option = document.createElement("option");
+                                  var monthNumber =
+                                    i < 10 ? "0" + i : i.toString();
+                                  option.value = monthNumber;
+                                  option.textContent = monthNumber;
+                                  monthSelect.appendChild(option);
+                                }
+                              </script>
+                              <label for="year">Year:</label>
+                              <input type="number" style="width: 50px" />
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Gender:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input type="radio" name="gender" />
+                              <label>Male</label>
+                              <input type="radio" name="gender" />
+                              <label>Female</label>
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div
+                              class="registerRightItem"
+                              style="display: flex; align-items: center"
+                            >
+                              <p>Address:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <textarea
+                                style="width: 283px"
+                                name=""
+                                id=""
+                                cols="22"
+                                rows="3"
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Telephone:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input style="width: 275px" type="number" />
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Email:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input
+                                style="width: 275px"
+                                type="email"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <!--Credentials Fieldset-->
+                    <div class="paddingItem">
+                      <fieldset style="margin-bottom: 20px">
+                        <legend><b>Credentials</b></legend>
+                        <div class="registration__container">
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Username:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input
+                                style="width: 275px"
+                                type="text"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Password:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input
+                                style="width: 275px"
+                                type="password"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div class="registration">
+                            <div class="registerRightItem">
+                              <p>Confirm Password:</p>
+                            </div>
+                            <div class="registerLeftItem">
+                              <input
+                                style="width: 275px"
+                                type="password"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <!-- Login and Cancel Button -->
+                  <div class="paddingItem">
+                    <div id="textCenter" class="form__action">
+                      <button class="btn-default">Register</button>
+                      <button class="btn-default">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="d-flex py-5">
+          <div class="flex-fill">
+            <div class="d-flex flex-column gap-3">
+              <div class="heading-title">Sweeties</div>
+              <ul class="d-flex flex-column gap-2">
+                <li>Bach Dang, Tan Uyen, Binh Duong</li>
+                <li>my.vothi.cit19@eiu.edu.vn</li>
+                <li>+84933936945</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-fill">
+            <div>
+              <h5>SERVICES</h5>
+              <ul>
+                <li>
+                  <a href="#">Privacy policy</a>
+                </li>
+                <li>
+                  <a href="#">Refund policy</a>
+                </li>
+                <li>
+                  <a href="#">Shipping & Return</a>
+                </li>
+                <li>
+                  <a href="#">Term & conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-fill">
+            <div>
+              <h5>INFORMATION</h5>
+              <ul>
+                <li>
+                  <a href="#">My account</a>
+                </li>
+                <li>
+                  <a href="#">Cart</a>
+                </li>
+                <li>
+                  <a href="#">Wishlist</a>
+                </li>
+                <li>
+                  <a href="#">Product Compare</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="py-2 text-center">© 2023.</div>
+      </div>
+    </footer>
+    <script src="../public/js/function.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --main-bg-color: #fffbf3;
+  --footer-bg-color: #efeadf;
+  --secondary-bg-color: #ccc5b9;
+  --color-heading-text: #6d4f4f;
+  --font-lilita-one: "Lilita One", sans-serif;
+  --font-signiko-negative: "Signika Negative", sans-serif;
+  --main-font-text: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font-text);
+  color: var(--color-heading-text);
+  background-color: #fffcf2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-heading-text);
+  transition: ease-in-out 0.25s;
+}
+
+a:hover {
+  color: #eb5e28;
+}
+
+.btn-default {
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 15px 10px 15px;
+  transition: ease-in-out 0.25s;
+  background-color: #eb5e28;
+  color: var(--main-bg-color);
+  font-weight: 600;
+}
+
+.btn-default:hover {
+  box-shadow: 2px 2px #943814;
+  transform: translate(-2px, -2px);
+}
+
+#header {
+}
+
+#header-nav-items > li.active {
+  background-color: #eb5e28;
+  padding: 5px 25px 5px 25px;
+  border-radius: 9999px;
+  border: 1px solid #252422;
+}
+
+#header-nav-items > li.active > a {
+  color: white;
+}
+
+.header-menu-bars {
+  display: none;
+}
+
+#main {
+}
+
+#products-show {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Khoảng cách giữa các sản phẩm */
+  justify-content: space-between;
+}
+
+#products-show > div {
+  flex: 0 0 calc(33.33% - 15px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.product-card__media {
+  overflow: hidden;
+}
+
+.product-card__media img {
+  transition: 0.7s ease-in-out;
+}
+
+.product-card__media img:hover {
+  transform: scale(1.15) rotate(-2deg);
+}
+
+.banner-container {
+}
+.banner-media {
+}
+.banner-content {
+}
+
+#footer {
+  background-color: var(--footer-bg-color);
+  color: var(--color-heading-text);
+  font-weight: 400;
+  margin-top: 75px;
+}
+
+#footer h5 {
+  font-weight: 700;
+}
+
+#footer > .container > div > div > div > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive  */
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 992px) {
+  .banner-container {
+    flex-direction: column !important;
+  }
+  .banner-media {
+    width: 100% !important;
+  }
+  .banner-content {
+    width: 100% !important;
+  }
+  #footer > .container > div {
+    flex-direction: column;
+  }
+  #footer > .container > div > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+}
+/* max-width: nho hon */
+@media (max-width: 768px) {    
+  #header-nav-items {
+    /* kh hien thi */
+    display: none !important;
+  }
+  .header-menu-bars {
+    /* hien thi theo the cha */
+    display: inherit;
+  }
+  #products-show > div {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+@media (min-width: 576px) {
+}
+
+/* Class component  */
+
+.h100vh {
+  height: 100vh;
+}
+
+.font-lilita-one {
+  font-family: var(--font-lilita-one);
+}
+
+.font-signiko-negative {
+  font-family: var(--font-signiko-negative);
+}
+
+.heading-container {
+  padding: 25px 0 25px 0;
+  width: 100%;
+}
+
+.heading-title {
+  font-family: var(--font-lilita-one);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 35px;
+  color: var(--color-heading-text);
+}
+
+.text-color-heading {
+  color: var(--color-heading-text);
+}
+
+.text-product-heading {
+  font-size: 20px;
+  font-weight: 700;
+}
